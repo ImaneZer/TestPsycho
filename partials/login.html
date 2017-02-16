@@ -1,0 +1,40 @@
+
+ <div class="heading">
+      <br><br> Ψ PsychoTest Ψ
+    </div>
+<div id="wrapper">
+
+<div class="page-content" style="float:right; width:50px;height:100px; background-color: transparent;">
+
+<form name="login-form" class="login-form" role="form" style="background-color: transparent;">
+
+  <!--Header-->
+    <div class="header" >
+    <h1 style="color: white;">Connexion</h1>
+   <!-- <span style="color: white;">Infos Infos Infos Infos.</span>-->
+    </div>
+    <!--END header-->
+  
+  <!--Input fields-->
+  <div class="content">
+  <!--USERNAME-->
+    <input type="text" class="input username" placeholder="Identifiant" name="email" ng-model="login.email"/><!--END USERNAME-->
+    <!--PASSWORD-->
+    <input type="password" ng-model="login.password" class="input password" placeholder="Mot de passe" /><!--END PASSWORD-->
+   <div> <input ng-model="login.type" type="radio" id="Medecin" value="medecin" name="type" checked>
+    <label class="inline" for="Medecin" style="color: white;"> Medecin </label>
+    <input ng-model="login.type" type="radio" id="Patient" value="patient" name="type">
+    <label class="inline" for="Patient" style="color: white;"> Patient </label> </div>
+    
+  </div>
+    <!--END Input fields-->
+    <!--Buttons-->
+    <div class="footer" style="background-color: transparent;">
+    <center><button type="submit" class="width-35  btn btn-sm btn-primary" ng-click="doLogin(login)" data-ng-disabled="loginForm.$invalid" > Se connecter </button></center>
+    </div>
+    <!--END Buttons-->
+
+</form>
+<!--end login form-->              
+       
+</div><!-- /.page-content -->

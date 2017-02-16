@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+         <title>Ψ PsychoTest</title>
+        
+<!--Stylesheets-->
+   <!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/toaster.css" rel="stylesheet">
+<link href="fonts/pacifico/stylesheet.css" rel="stylesheet" type="text/css" />
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<link href="fonts/pacifico/stylesheet.css" rel="stylesheet" type="text/css" />
+
+<!--Scripts-->
+<script type="text/javascript" src="js/lib/jquery-2.0.2.js"></script>
+<!--Sliding icons-->
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".username").focus(function() {
+    $(".user-icon").css("left","-48px");
+  });
+  $(".username").blur(function() {
+    $(".user-icon").css("left","0px");
+  });
+  
+  $(".password").focus(function() {
+    $(".pass-icon").css("left","-48px");
+  });
+  $(".password").blur(function() {
+    $(".pass-icon").css("left","0px");
+  });
+});
+</script>
+</head>
+
+  <body>
+  
+         <div data-ng-view="" id="ng-view" >
+         </div>
+  </body>
+
+  <toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
+  <!-- Libs -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/angular-animate.min.js" ></script>
+  <script src="js/toaster.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/data.js"></script>
+  <script src="app/directives.js"></script>
+  <script src="app/authCtrl.js"></script>
+  <script src="app/medecinCtrl.js"></script>
+  <script src="app/listeCtrl.js"></script>
+</html>
+

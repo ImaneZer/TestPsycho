@@ -1,0 +1,94 @@
+ <div class="page-content">
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        
+          <a class="navbar-brand" href="#"><span> <b>Medecin ID: </b> {{id}}
+                        / <b> Nom:</b> {{nom}}
+                        </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a ng-click="logout();">Déconnexion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <div class="container">
+                <div class="row">
+                    <h1>Liste des patients</h1>
+                    <br>
+                   </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Identifiant</th>
+                  <th>Nom</th>
+                  <th>Prénom</th>
+                  <th>Email</th>
+                  <th>Téléphone</th>
+                  <th>Adresse</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="data in patients">
+                <td>{{data.id}}</td>
+                <td>{{data.nom}}</td>
+                <td>{{data.prenom}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.telephone}}</td>
+                <td>{{data.adresse}}</td>
+                <td>
+                    <a class="btn btn-link"><i class="fa fa-fw fa-edit"></i></a>
+                </td>
+                <td>
+                    <a class="btn btn-link"><i class="fa fa-fw fa-trash-o"></i></a>
+                </td>
+                <td>
+                    <a href="../TestPsycho/pdfs/resultat_de_patient_numero_{{data.id}}.pdf" class="btn btn-link"><i class="fa fa-fw -o fa-search"></i></a>
+                </td> 
+              </tr>
+              </tbody>
+            </table>
+            <a class="btn btn-primary" href="#ajoutPat"><i class="fa fa-fw -o fa-plus"></i>Ajouter un nouveau patient</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</div>
+<!-- /.page-content -->
