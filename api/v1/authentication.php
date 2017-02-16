@@ -24,6 +24,14 @@ $app->post('/login', function() use ($app) {
     else if($type == "patient"){
      $user = $db->getOneRecord("select id,nom,prenom,email,password,telephone,adresse from patient where email='$email'");
      $medecin_patient = $db->getOneRecord("select m.id,m.nom,m.prenom,m.email,m.password,m.telephone,m.adresse from medecin m, patient p where p.id_medecin = m.id and p.email='$email'");
+
+        $response['id_medecin'] = $medecin_patient['id'];
+        $response['nom_medecin'] = $medecin_patient['nom'];
+        $response['prenom_medecin'] = $medecin_patient['prenom'];
+        $response['email_medecin'] = $medecin_patient['email'];
+        $response['telephone_medecin'] = $medecin_patient['telephone'];
+        $response['adresse_medecin'] = $medecin_patient['adresse'];
+
     }
     if ($user != NULL) {
         if(passwordHash::check_password($user['password'],$password)){
@@ -36,14 +44,6 @@ $app->post('/login', function() use ($app) {
         $response['password'] = $user['password'];
         $response['telephone'] = $user['telephone'];
         $response['adresse'] = $user['adresse'];
-
-        $response['id_medecin'] = $medecin_patient['id'];
-        $response['nom_medecin'] = $medecin_patient['nom'];
-        $response['prenom_medecin'] = $medecin_patient['prenom'];
-        $response['email_medecin'] = $medecin_patient['email'];
-        $response['telephone_medecin'] = $medecin_patient['telephone'];
-        $response['adresse_medecin'] = $medecin_patient['adresse'];
-
         $response['type'] = $type;
         if (!isset($_SESSION)) {
             session_start();

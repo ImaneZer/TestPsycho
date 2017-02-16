@@ -19,12 +19,6 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
             Data.toast(results);
             if (results.status == "Succès" && results.type == "medecin") {
                 $location.path('dashboard/'+results.id);
-                /*createCookie('id_medecin',results.id, 7);
-                createCookie('nom_medecin',results.nom, 7);
-                createCookie('prenom_medecin',results.prenom, 7);
-                createCookie('email_medecin',results.email, 7);
-                createCookie('telephone_medecin',results.telephone, 7);
-                createCookie('adresse_medecin',results.adresse, 7);*/
             }
             else if (results.status == "Succès" && results.type == "patient") {
                 document.location.href="../TestPsycho/partials/patientTest.html";
