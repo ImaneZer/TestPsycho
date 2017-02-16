@@ -33,7 +33,7 @@ app.config(['$routeProvider',
             templateUrl: 'partials/login.html',
             controller: 'authCtrl'
         })
-            .when('/logout', {
+           .when('/logout', {
                 title: 'Logout',
                 templateUrl: 'partials/login.html',
                 controller: 'logoutCtrl'

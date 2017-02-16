@@ -1,40 +1,85 @@
+ 
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  </head>
 
- <div class="heading">
-      <br><br> Ψ PsychoTest Ψ
+ <div class="background ng-scope"></div>
+  <!-- uiView: --><div ui-view="" class="ng-scope" style="">
+  <div class="background ng-scope"></div>
+
+<div class="home ng-scope">
+  <div class="row">
+    <div class="section col-md-4 col-md-offset-2">
+      <div class="logo">
+      Ψ<img src="./img/lg.png"/>Ψ <img src="./img/capturee.png"/>
     </div>
-<div id="wrapper">
-
-<div class="page-content" style="float:right; width:50px;height:100px; background-color: transparent;">
-
-<form name="login-form" class="login-form" role="form" style="background-color: transparent;">
-
-  <!--Header-->
-    <div class="header" >
-    <h1 style="color: white;">Connexion</h1>
-   <!-- <span style="color: white;">Infos Infos Infos Infos.</span>-->
     </div>
-    <!--END header-->
-  
-  <!--Input fields-->
-  <div class="content">
-  <!--USERNAME-->
-    <input type="text" class="input username" placeholder="Identifiant" name="email" ng-model="login.email"/><!--END USERNAME-->
-    <!--PASSWORD-->
-    <input type="password" ng-model="login.password" class="input password" placeholder="Mot de passe" /><!--END PASSWORD-->
-   <div> <input ng-model="login.type" type="radio" id="Medecin" value="medecin" name="type" checked>
+    
+    <div class="section col-md-4">
+      <!-- uiView: --><div ui-view="" class="view ng-scope"><div class="home-login ng-scope">
+  <h1>Bienvenue!</h1>
+  <p>Veuillez saisir votre identifiant et votre mot de passe.</p>
+  <form name="login-form" class="ng-pristine ng-valid" role="form" >
+
+    <div class="form-content">
+      <div class="form-group">
+         <input ng-model="login.email" class="form-control input-underline input-lg ng-pristine ng-valid ng-empty ng-touched" id="" placeholder="Email" style="" type="text" name="email">
+      </div>
+      <div class="form-group">
+         <input ng-model="login.password" class="form-control input-underline input-lg ng-pristine ng-untouched ng-valid ng-empty" id="" placeholder="Mot de passe" type="password">
+      </div>
+
+    </div>
+    <div>
+ <input ng-model="login.type" type="radio" id="Medecin" value="medecin" name="type" checked>
     <label class="inline" for="Medecin" style="color: white;"> Medecin </label>
     <input ng-model="login.type" type="radio" id="Patient" value="patient" name="type">
-    <label class="inline" for="Patient" style="color: white;"> Patient </label> </div>
+    <label class="inline" for="Patient" style="color: white;"> Patient </label> </div><br>
     
-  </div>
-    <!--END Input fields-->
-    <!--Buttons-->
-    <div class="footer" style="background-color: transparent;">
-    <center><button type="submit" class="width-35  btn btn-sm btn-primary" ng-click="doLogin(login)" data-ng-disabled="loginForm.$invalid" > Se connecter </button></center>
-    </div>
-    <!--END Buttons-->
+ <button type="submit" class="btn btn-block btn-primary btn-lg"ng-click="doLogin(login)" data-ng-disabled="loginForm.$invalid" > Se connecter </button> 
+ </form>
 
-</form>
-<!--end login form-->              
-       
-</div><!-- /.page-content -->
+</div>
+</div>
+</div>
+</div>
+<br>  <br>  <br>  <br>  <br>  <br>
+  
+
+</div>
+<footer>
+<!-- Copyright and social media section -->
+<section class="copyright-section">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="logo">
+<!-- Replace Your logo and remove text  -->
+<!-- <img src="images/logo.png" class="img-responsive center-block"> -->
+<!--<h2 class="demo-logo">Ψ <strong>P</strong>sycho<strong>T</strong>est Ψ</h2>-->
+</div>
+<div class="social-media">
+<ul class="list-inline">
+<li><a href=""><i class="fa fa-facebook"></i></a></li>
+<li><a href=""><i class="fa fa-twitter"></i></a></li>
+<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+<li><a href=""><i class="fa fa-pinterest"></i></a></li>
+<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+</ul>
+</div>
+
+<div class="copyright">
+<p>Copyright &copy; 2017 │A.M.I (V1.0) │UFR Sciences et Technique du Havre </p>
+</div>
+</div>
+</div>
+</div>
+</section><!--  End of copyright and social media section -->
+</footer> <!--  End of footer -->
+</div>
+
+<!-- /.page-content -->

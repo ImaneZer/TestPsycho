@@ -1,15 +1,55 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  </head>
 <script type="text/javascript"></script>
 <div class="page-content">
+<div class="navbar navbar-default navbar-static-top" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        
+         <a class="navbar-brand"><span> <img src="./img/logo_p1.png"/><b>   Medecin ID: </b> {{id}}
+                        / <b> Nom:</b> {{nom}} 
+                        </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a ng-click="logout();">Déconnexion</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div><br><br><br><br><br>
     <div class="row">
         <div class="space-6"></div>
         <div class="col-sm-6 col-sm-offset-1">
             <div id="login-box" class="login-box visible widget-box no-border">
                 <div class="widget-body">
                     <div class="widget-main">
-                        <h4 class="header blue lighter bigger">
-                            Ajouter patient 
-                        </h4>
-                        <br/>
+                         <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <div class="container">
+                <div class="row">
+                    <h1>Ajouter un nouveau patient </h1>
+                    <br>
+                   </div>
+          </div>
+        </div>
+      </div>
+    </div>                        
                         <form name="ajoutPatForm" class="form-horizontal" role="form">
                             <div class="form-group">
                                 <label class="col-sm-5 control-label no-padding-right" for="email">Email</label>
@@ -77,14 +117,13 @@
                                 <span class="lbl col-sm-5"> </span>
                                 <div class="col-sm-7">
                                     <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="ajoutPatient(ajoutPat)" data-ng-disabled="ajoutPatForm.$invalid">
-                                        Enregistrer
+                                        Ajouter
                                     </button>
                                 </div>
                             </div>
                             </fieldset>
                             <span class="lbl col-sm-5"> </span>
-                            <div class="col-sm-7">Vous avez déja un compte ?<a href="#/login">S'inscrire</a>
-                            </div>
+                            
                         </form>
                     </div>
                 </div>
@@ -92,5 +131,30 @@
 
         </div>
     </div>
+    <footer>
+<!-- Copyright and social media section -->
+<section class="copyright-section">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+
+<div class="social-media">
+<ul class="list-inline">
+<li><a href=""><i class="fa fa-facebook"></i></a></li>
+<li><a href=""><i class="fa fa-twitter"></i></a></li>
+<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+<li><a href=""><i class="fa fa-pinterest"></i></a></li>
+<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+</ul>
+</div>
+
+<div class="copyright">
+<p>Copyright &copy; 2017 │A.M.I (V1.0) │UFR Sciences et Technique du Havre </p>
+</div>
+</div>
+</div>
+</div>
+</section><!--  End of copyright and social media section -->
+</footer> <!--  End of footer -->
 </div>
 <!-- /.page-content -->
