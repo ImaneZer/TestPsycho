@@ -36,7 +36,7 @@ app.config(['$routeProvider',
            .when('/logout', {
                 title: 'Logout',
                 templateUrl: 'partials/login.html',
-                controller: 'logoutCtrl'
+                controller: 'authCtrl'
             })
             .when('/signup', {
                 title: 'Signup',

@@ -5,7 +5,7 @@
 		
 		const DB_SERVER = "localhost";
 		const DB_USER = "root";
-		const DB_PASSWORD = "ok";
+		const DB_PASSWORD = "067486725";
 		const DB = "testPsy";
 
 		private $db = NULL;
