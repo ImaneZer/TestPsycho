@@ -1,7 +1,9 @@
 #Projet Master 2 SIRES TestPsycho
 #Développement Web
 
-Client : Cyrille Bertelle
+Clients : <br>
+- Professeur et Chercheur Cyrille Bertelle. <br>
+- Docteur Sophie BAUDIC. <br>
 
 Développement d’un serveur de tests psychologiques.<br>
 Dans le cadre d’une collaboration avec une neuro-psychologue spécialisée dans le traitement  de la douleur, il est proposé de développer un serveur web de tests psychologiques servant à diagnostiquer les effets de concentration liés au traitement de la douleur. Les test demandés soont sous forme d'affichage d'images, de caractères ou de symboles avec réaction attendu de l’utilisateur via son clavier.<br>
