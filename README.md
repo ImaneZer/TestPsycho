@@ -29,13 +29,13 @@ Nous nous intéressons donc, dans cette partie, à la réalisation du diagramme 
 #### Diagramme de classes:
 ![2classdiagram](https://cloud.githubusercontent.com/assets/22649502/23113272/570c0724-f737-11e6-9d8c-b52a8050cf0a.jpg)<br>
 
-# Matrice de traçabilité:
+# 2) Matrice de traçabilité:
 ### Besoins fonctionnels:
 ![1](https://cloud.githubusercontent.com/assets/22649502/23113395/17cdcc22-f738-11e6-8120-9a12195d80d6.png)<br>
 ### Besoins non fonctionnels:
 ![2](https://cloud.githubusercontent.com/assets/22649502/23113449/79aab0d6-f738-11e6-9f4d-a7a064462e2a.png)<br>
 
-# Demo:<br>
+# 3) Demo:<br>
 ## Interface d'acceuil:<br>
 ![1](https://cloud.githubusercontent.com/assets/22649502/23112585/9eefda12-f731-11e6-8391-61f881842355.png)<br>
 ## Tableau de bord du medecin:<br>
