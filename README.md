@@ -23,7 +23,8 @@ Le but est de développer un petit serveur web qui est à destination de 2 caté
 ![5](https://cloud.githubusercontent.com/assets/22649502/23112726/e0451e40-f732-11e6-9a63-064def8dba75.png)<br>
 ![6](https://cloud.githubusercontent.com/assets/22649502/23112763/2f2194da-f733-11e6-9ba4-96d25a7e8454.png)<br>
 ![7](https://cloud.githubusercontent.com/assets/22649502/23112801/84e3ca00-f733-11e6-9233-1b330b0f7bc2.png)<br>
-
+##Lors de la fin d'un test (Affichage du pourcentage et temps moyen par puzzle):<br>
+![3](https://cloud.githubusercontent.com/assets/22649502/23112949/dc811960-f734-11e6-9e76-9ab2a20afad3.png)<br>
 ##Exemple de résulats de test:<br>
 ![4](https://cloud.githubusercontent.com/assets/22649502/23112824/ae37b8da-f733-11e6-84cc-6b4218172054.png)<br>
 
