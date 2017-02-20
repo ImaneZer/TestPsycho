@@ -17,3 +17,13 @@ Le but est de développer un petit serveur web qui est à destination de 2 caté
 ##Interface d'ajout d'un paient par un medecin:<br>
 ![3](https://cloud.githubusercontent.com/assets/22649502/23112659/3db83eaa-f732-11e6-9304-244d49ca5168.png)<br>
 
+##Tableau de bord du patient:<br>
+###En attente d'ajout de l'image...<br>
+##Départ d'un exemple de test de rotation:<br>
+![5](https://cloud.githubusercontent.com/assets/22649502/23112726/e0451e40-f732-11e6-9a63-064def8dba75.png)<br>
+![6](https://cloud.githubusercontent.com/assets/22649502/23112763/2f2194da-f733-11e6-9ba4-96d25a7e8454.png)<br>
+![7](https://cloud.githubusercontent.com/assets/22649502/23112801/84e3ca00-f733-11e6-9233-1b330b0f7bc2.png)<br>
+
+##Exemple de résulats de test:<br>
+![4](https://cloud.githubusercontent.com/assets/22649502/23112824/ae37b8da-f733-11e6-84cc-6b4218172054.png)<br>
+
