@@ -20,9 +20,16 @@ $app->post('/login', function() use ($app) {
     $email = $r->customer->email;
     if($type == "medecin"){
     $user = $db->getOneRecord("select id,nom,prenom,email,password,telephone,adresse from medecin where email='$email'");
-}
+    }
     else if($type == "patient"){
      $user = $db->getOneRecord("select id,nom,prenom,email,password,telephone,adresse from patient where email='$email'");
+     $medecin_user= $db->getOneRecord("select m.id,m.nom,m.prenom,m.email,m.password,m.telephone,m.adresse from patient p, medecin m where p.email='$email' and m.id=p.id_medecin");
+        $response['id_medecin'] = $medecin_user['id'];
+        $response['nom_medecin'] = $medecin_user['nom'];
+        $response['prenom_medecin'] = $medecin_user['prenom'];
+        $response['email_medecin'] = $medecin_user['email'];
+        $response['telephone_medecin'] = $medecin_user['telephone'];
+        $response['adresse_medecin'] = $medecin_user['adresse'];
     }
     if ($user != NULL) {
         if(passwordHash::check_password($user['password'],$password)){

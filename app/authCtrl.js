@@ -22,7 +22,19 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
             }
             else if (results.status == "Succès" && results.type == "patient") {
                 document.location.href="../TestPsycho/partials/patientTest.html";
+                createCookie('id_medecin',results.id_medecin, 7);
+                createCookie('nom_medecin',results.nom_medecin, 7);
+                createCookie('prenom_medecin',results.prenom_medecin, 7);
+                createCookie('email_medecin',results.email_medecin, 7);
+                createCookie('telephone_medecin',results.telephone_medecin, 7);
+                createCookie('adresse_medecin',results.adresse_medecin, 7);
+
                 createCookie('id_patient',results.id, 7);
+                createCookie('nom_patient',results.nom, 7);
+                createCookie('prenom_patient',results.prenom, 7);
+                createCookie('email_patient',results.email, 7);
+                createCookie('telephone_patient',results.telephone, 7);
+                createCookie('adresse_patient',results.adresse, 7);
             }
         });
     };

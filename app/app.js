@@ -42,7 +42,7 @@ app.config(['$routeProvider',
                 title: 'Signup',
                 templateUrl: 'partials/signup.html',
                 controller: 'authCtrl'
-            })
+            })    
             .when('/test', {
                 title: 'test',
                 templateUrl: 'partials/patientTest.html',
