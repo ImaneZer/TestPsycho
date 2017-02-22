@@ -6,6 +6,9 @@ app.factory("services", ['$http', function($http) {
     obj.getPatients = function(medecinID){
         return $http.get(serviceBase + 'patients?id=' + medecinID);
     }
+     obj.getPatient = function(patientID){
+        return $http.get(serviceBase + 'patient?id=' + patientID);
+    }
     /*obj.getMedecin = function(medecinID){
         return $http.get(serviceBase + 'medecin?id=' + medecinID);
     }*/
@@ -62,6 +65,27 @@ app.config(['$routeProvider',
                 title: 'AjoutPatient',
                 templateUrl: 'partials/ajoutPatient.html',
                 controller: 'medecinCtrl'
+            })
+            .when('/resultTest-patient/:patientID', {
+                title: 'test',
+                templateUrl: 'partials/resultTest-patient.html',
+                 resolve: {
+                  patient: function(services, $route){
+                    var patientID = $route.current.params.patientID;
+                    return services.getPatient(patientID);
+                        }
+                }
+            })
+            .when('/manage-patient/:patientID', {
+            title: 'Manage Patients',
+            templateUrl: 'partials/manage-patient.html',
+            controller: 'editCtrl',
+                resolve: {
+                  patient: function(services, $route){
+                    var patientID = $route.current.params.patientID;
+                    return services.getPatient(patientID);
+                        }
+                }
             })
             .when('/', {
                 title: 'Login',

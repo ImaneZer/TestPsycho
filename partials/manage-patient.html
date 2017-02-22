@@ -1,0 +1,108 @@
+﻿<style type="text/css">
+  .form-horizontal input.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+  }
+
+  .form-horizontal input.ng-valid.ng-dirty {
+    border-color: #78FA89;
+  }
+</style>
+<div class="page-content">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-static-top" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                   <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        
+           <a class="navbar-brand"><span> <img src="./img/logo_p1.png"/><b>   Medecin ID: </b> {{id}}
+                        / <b> Nom:</b> {{nom}} 
+                        </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#logout">Déconnexion</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div><br><br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+        <nav class= "navbar navbar-default" role= "navigation" >
+        <div class= "navbar-header" >
+        <a class= "navbar-brand" href= "#/dashboard"><i class="glyphicon glyphicon-th-large"></i> Liste des patients </a>
+        <a ng-show="patient._id" class= "navbar-brand" href= "#/manage-patient/0"><i class="glyphicon glyphicon-plus"></i> Ajouter un patient </a>
+        <a ng-show="patient._id" class= "navbar-brand pull-right"><i class="glyphicon glyphicon-edit"></i> Numéro de patient actuel: {{patient._id}}</a>
+        </div>
+        </nav>
+        <header>
+            <h3>{{title}}</h3>
+        </header><br><br><br>
+        <div class="col-md-12">
+
+<form role="form" name="myForm" class="form-horizontal">
+<div class="row">
+<div class= "form-group" ng-class="{error: myForm.name.$invalid}">
+    <label class= "col-md-2"> Nom </label>
+    <div class="col-md-4">
+    <input name="name" ng-model="patient.nom" type= "text" class= "form-control" placeholder="Your name" required/>
+    <span ng-show="myForm.name.$dirty && myForm.name.$invalid" class="help-inline">Name Required</span>
+    </div>
+</div>
+<div class= "form-group">
+    <label class= "col-md-2"> Email  </label>
+    <div class="col-md-4">
+    <input name="email" ng-model="patient.email" type= "email" class= "form-control" placeholder="Enter email" required/>
+    <span ng-show="myForm.email.$dirty && myForm.email.$invalid && !myForm.email.$error.email" class="help-inline">Email Required</span>
+    <span ng-show="myForm.email.$error.email" class="help-inline">Email is not valid</span>
+    </div>
+</div>
+<div class= "form-group">
+    <label class= "col-md-2">Addresse </label>
+    <div class="col-md-4">
+    <input ng-model="patient.address" type= "text" class= "form-control" placeholder= "Present Address"/>
+    </div>
+</div>
+<div class= "form-group">
+    <label class= "col-md-2">Ville </label>
+    <div class="col-md-4">
+    <input ng-model="patient.city" type= "text" class= "form-control" placeholder= "Current City"/>
+    </div>
+</div>
+<div class= "form-group">
+    <label class= "col-md-2">Pays </label>
+    <div class="col-md-4">
+    <input ng-model="patient.country" type= "text" class= "form-control" placeholder= "Residing Country"/>
+    </div>
+</div>
+<div class= "form-group">
+    <label class= "col-md-2"></label>
+    <div class="col-md-4">
+    <a href="#/" class="btn">Annuler</a>
+        <button ng-click="savePatient(patient);" 
+                ng-disabled="isClean() || myForm.$invalid"
+                class="btn btn-primary">{{buttonText}}</button>
+        <button ng-click="deletePatient(patient)"
+                ng-show="patient._id" class="btn btn-warning">Supprimer</button>
+    </div>
+</div>
+</div>
+</form>
+        </div></div>
+    </div>
+</div>
