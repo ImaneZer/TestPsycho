@@ -1,4 +1,4 @@
- <div class="page-content">
+﻿ <div class="page-content">
  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +39,7 @@
           <div class="col-md-12">
               <div class="container">
                 <div class="row">
-                    <h1>Vos patients</h1>
+                    <h2>Résultats des tests passés par le patient numéro: {{data.id}}, nom: {{data.nom}}, prenom {{data.prenom}}</h2>
                     <br>
                    </div>
           </div>
@@ -53,41 +53,40 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Identifiant</th>
-                  <th>Nom</th>
-                  <th>Prénom</th>
-                  <th>Email</th>
-                  <th>Téléphone</th>
-                  <th>Adresse</th>
+                  <th>ID test</th>
+                  <th>Nom du test</th>
+                  <th>Date</th>
+                  <th>Heure</th>
                   <th></th>
                   <th></th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-              <tr ng-repeat="data in patients">
-                <td>{{data.id}}</td>
-                <td>{{data.nom}}</td>
-                <td>{{data.prenom}}</td>
-                <td>{{data.email}}</td>
-                <td>{{data.telephone}}</td>
-                <td>{{data.adresse}}</td>
+              <tr >
+                <td>1</td>
+                <td>Rotation</td>
+                <td>01/01/2017</td>
+                <td>00:00</td>
+                <td>
+                    <a class="btn btn-link"><i class="fa fa-fw fa-edit"></i></a>
+                </td>
+                <td>
+                    <a class="btn btn-link"><i class="fa fa-fw fa-trash-o"></i></a>
+                </td>
                 <td>
                     <a href="../TestPsycho/pdfs/resultat_de_patient_numero_{{data.id}}.pdf" class="btn btn-link"><i class="fa fa-fw -o fa-search"></i></a>
                 </td> 
-                <td><a href="#/manage-patient/{{data.id}}" class="btn">&nbsp;<i class="fa fa-fw fa-edit"></i>&nbsp; Gerer</a></td>
-                <td><a href="#/resultTest-patient/{{data.id}}" class="btn">&nbsp;<i class="fa fa-fw -o fa-search"></i>&nbsp; Résultas des tests</a></td>
               </tr>
               </tbody>
             </table>
-            <a class="btn btn-primary" href="#ajoutPat"><i class="fa fa-fw -o fa-plus"></i>Ajouter un nouveau patient</a>
           </div>
         </div>
       </div>
     </div>
 </div>
 </body>
-<br>  <br>  <br>  <br>  <br>  <br>
+<br>  <br>  <br>  <br>  <br>  <br><br>  <br>  <br>  <br><br>  <br>  <br>  <br>
   
 <footer>
 <!-- Copyright and social media section -->

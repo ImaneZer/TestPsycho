@@ -5,7 +5,7 @@
 		
 		const DB_SERVER = "localhost";
 		const DB_USER = "root";
-		const DB_PASSWORD = "067486725";
+		const DB_PASSWORD = "ok";
 		const DB = "testPsy";
 
 		private $db = NULL;
@@ -42,6 +42,7 @@
 			}
 			$id = $_SESSION['id'];
 			$query="SELECT p.id, p.nom, p.prenom, p.email, p.telephone, p.adresse FROM patient p WHERE p.id_medecin = $id";
+			$pid=p.id;
 			$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
 
 			if($r->num_rows > 0){
@@ -66,6 +67,21 @@
 					$result = $r->fetch_assoc();	
 					$this->response($this->json($result), 200);
 				}
+			$this->response('',204);	// If no records "No Content" status
+		}
+				private function patient(){	
+			if($this->get_request_method() != "GET"){
+				$this->response('',406);
+			}
+			$id = (int)$this->_request['$data.id'];
+			if($pid > 0){	
+				$query="SELECT distinct p.id, p.nom, p.prenom, p.email, p.password, p.telephone, p.adresse, p.id_medecin FROM patient p WHERE p.id=$id"; 
+				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
+				if($r->num_rows > 0) {
+					$result = $r->fetch_assoc();	
+					$this->response($this->json($result), 200); // send user details
+				}
+			}
 			$this->response('',204);	// If no records "No Content" status
 		}
 		/*private function updatePatient(){
