@@ -72,11 +72,10 @@
                 <td>{{data.email}}</td>
                 <td>{{data.telephone}}</td>
                 <td>{{data.adresse}}</td>
-                <td>
-                    <a href="../TestPsycho/pdfs/resultat_de_patient_numero_{{data.id}}.pdf" class="btn btn-link"><i class="fa fa-fw -o fa-search"></i></a>
-                </td> 
                 <td><a href="#/manage-patient/{{data.id}}" class="btn">&nbsp;<i class="fa fa-fw fa-edit"></i>&nbsp; Gerer</a></td>
-                <td><a href="#/resultTest-patient/{{data.id}}" class="btn">&nbsp;<i class="fa fa-fw -o fa-search"></i>&nbsp; Résultas des tests</a></td>
+                <td><a href="../TestPsycho/pdfs/1_{{data.id}}.pdf" class="btn">&nbsp;<i class="fa fa-fw -o fa-search"></i>&nbsp; Test1</a>
+                 <a href="../TestPsycho/pdfs/2_{{data.id}}.pdf" class="btn">&nbsp;<i class="fa fa-fw -o fa-search"></i>&nbsp; Test2</a>
+                </td>
               </tr>
               </tbody>
             </table>
