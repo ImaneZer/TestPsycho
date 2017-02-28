@@ -84,13 +84,42 @@
 			}
 			$this->response('',204);	// If no records "No Content" status
 		}
-		/*private function updatePatient(){
+
+		private function insertPatient(){
+			if($this->get_request_method() != "POST"){
+				$this->response('',406);
+			}
+
+			$patient = json_decode(file_get_contents("php://input"),true);
+			$column_names = array('id', 'nom', 'prenom', 'email', 'telephone', 'adresse');
+			$keys = array_keys($patient);
+			$columns = '';
+			$values = '';
+			foreach($column_names as $desired_key){ // Check the patient received. If blank insert blank into the array.
+			   if(!in_array($desired_key, $keys)) {
+			   		$$desired_key = '';
+				}else{
+					$$desired_key = $patient[$desired_key];
+				}
+				$columns = $columns.$desired_key.',';
+				$values = $values."'".$$desired_key."',";
+			}
+			$query = "INSERT INTO patient(".trim($columns,',').") VALUES(".trim($values,',').")";
+			if(!empty($patient)){
+				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
+				$success = array('status' => "Success", "msg" => "Patient Created Successfully.", "data" => $patient);
+				$this->response($this->json($success),200);
+			}else
+				$this->response('',204);	//"No Content" status
+		}
+
+		private function updatePatient(){
 			if($this->get_request_method() != "POST"){
 				$this->response('',406);
 			}
 			$patient = json_decode(file_get_contents("php://input"),true);
 			$id = (int)$patient['id'];
-			$column_names = array('patientName', 'email', 'city', 'address', 'country');
+			$column_names = array('nom', 'prenom', 'email', 'telephone', 'adresse');
 			$keys = array_keys($patient['patient']);
 			$columns = '';
 			$values = '';
@@ -102,14 +131,14 @@
 				}
 				$columns = $columns.$desired_key."='".$$desired_key."',";
 			}
-			$query = "UPDATE patients SET ".trim($columns,',')." WHERE patientNumber=$id";
+			$query = "UPDATE patient SET ".trim($columns,',')." WHERE id=$id";
 			if(!empty($patient)){
 				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
 				$success = array('status' => "Success", "msg" => "Patient ".$id." Updated Successfully.", "data" => $patient);
 				$this->response($this->json($success),200);
 			}else
 				$this->response('',204);	// "No Content" status
-		}*/
+		}
 		
 		/*private function deletePatient(){
 			if($this->get_request_method() != "DELETE"){

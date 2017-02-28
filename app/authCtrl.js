@@ -18,7 +18,7 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
         }).then(function (results) {
             Data.toast(results);
             if (results.status == "Succès" && results.type == "medecin") {
-                $location.path('dashboard/'+results.id);
+                $location.path('dashboard');
             }
             else if (results.status == "Succès" && results.type == "patient") {
                 document.location.href="../TestPsycho/partials/listTests.html";

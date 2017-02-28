@@ -9,10 +9,9 @@ app.factory("services", ['$http', function($http) {
      obj.getPatient = function(patientID){
         return $http.get(serviceBase + 'patient?id=' + patientID);
     }
-    /*obj.getMedecin = function(medecinID){
+    obj.getMedecin = function(medecinID){
         return $http.get(serviceBase + 'medecin?id=' + medecinID);
-    }*/
-    /*
+    }
     obj.updatePatient = function (id,patient) {
         return $http.post(serviceBase + 'updatePatient', {id:id, patient:patient}).then(function (status) {
             return status.data;
@@ -23,7 +22,7 @@ app.factory("services", ['$http', function($http) {
         return $http.delete(serviceBase + 'deletePatient?id=' + id).then(function (status) {
             return status.data;
         });
-    };*/
+    };
 
     return obj;   
 }]);
@@ -50,7 +49,7 @@ app.config(['$routeProvider',
                 title: 'test',
                 templateUrl: 'partials/patientTest.html',
             })
-            .when('/dashboard/:medecinID', {
+            .when('/dashboard', {
                 title: 'Dashboard',
                 templateUrl: 'partials/dashboard.html',
                 controller: 'listeCtrl',

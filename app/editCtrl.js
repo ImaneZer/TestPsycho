@@ -18,7 +18,7 @@ app.controller('editCtrl', function ($scope, $rootScope, $location, $routeParams
       };
 
       $scope.savePatient = function(patient) {
-        $location.path('/');
+        $location.path('dashboard');
         if (patientID <= 0) {
             services.insertPatient(patient);
         }
