@@ -27,8 +27,8 @@
             <span class="icon-bar"></span>
           </button>
         
-           <a class="navbar-brand"><span> <img src="./img/logo_p1.png"/><b>   Medecin ID: </b> {{id}}
-                        / <b> Nom:</b> {{nom}} 
+           <a class="navbar-brand"><span> <img src="./img/logo_p1.png"/><b>   Medecin ID: </b> 
+                        / <b> Nom:</b> 
                         </a>
 
         </div>
@@ -47,7 +47,7 @@
         <div class= "navbar-header" >
         <a class= "navbar-brand" href= "#/dashboard"><i class="glyphicon glyphicon-th-large"></i> Liste des patients </a>
         <a ng-show="patient._id" class= "navbar-brand" href= "#/manage-patient/0"><i class="glyphicon glyphicon-plus"></i> Ajouter un patient </a>
-        <a ng-show="patient._id" class= "navbar-brand pull-right"><i class="glyphicon glyphicon-edit"></i> Numéro de patient actuel: {{patient._id}}</a>
+        <a ng-show="patient._id" class= "navbar-brand pull-right"><i class="glyphicon glyphicon-edit"></i> Numéro de patient actuel: {{patient.id}}</a>
         </div>
         </nav>
         <header>
@@ -58,36 +58,36 @@
 <form role="form" name="myForm" class="form-horizontal">
 <div class="row">
 <div class= "form-group" ng-class="{error: myForm.name.$invalid}">
-    <label class= "col-md-2"> Nom </label>
+    <label class= "col-md-2">Nom </label>
     <div class="col-md-4">
-    <input name="name" ng-model="patient.nom" type= "text" class= "form-control" placeholder="Your name" required/>
+    <input name="name" ng-model="patient.nom" type= "text" class= "form-control" placeholder="Nom" required/>
     <span ng-show="myForm.name.$dirty && myForm.name.$invalid" class="help-inline">Name Required</span>
     </div>
 </div>
 <div class= "form-group">
-    <label class= "col-md-2"> Email  </label>
+    <label class= "col-md-2">Prénom </label>
+    <div class="col-md-4">
+    <input ng-model="patient.prenom" type= "text" class= "form-control" placeholder= "Prénom"/>
+    </div>
+</div>
+<div class= "form-group">
+    <label class= "col-md-2">Email  </label>
     <div class="col-md-4">
     <input name="email" ng-model="patient.email" type= "email" class= "form-control" placeholder="Enter email" required/>
-    <span ng-show="myForm.email.$dirty && myForm.email.$invalid && !myForm.email.$error.email" class="help-inline">Email Required</span>
-    <span ng-show="myForm.email.$error.email" class="help-inline">Email is not valid</span>
+    <span ng-show="myForm.email.$dirty && myForm.email.$invalid && !myForm.email.$error.email" class="help-inline">Email obligatoire</span>
+    <span ng-show="myForm.email.$error.email" class="help-inline">Email n'est pas valide</span>
     </div>
 </div>
 <div class= "form-group">
-    <label class= "col-md-2">Addresse </label>
+    <label class= "col-md-2">Adresse </label>
     <div class="col-md-4">
-    <input ng-model="patient.address" type= "text" class= "form-control" placeholder= "Present Address"/>
+    <input ng-model="patient.adresse" type= "text" class= "form-control" placeholder= "Adresse"/>
     </div>
 </div>
 <div class= "form-group">
-    <label class= "col-md-2">Ville </label>
+    <label class= "col-md-2">Téléphone </label>
     <div class="col-md-4">
-    <input ng-model="patient.city" type= "text" class= "form-control" placeholder= "Current City"/>
-    </div>
-</div>
-<div class= "form-group">
-    <label class= "col-md-2">Pays </label>
-    <div class="col-md-4">
-    <input ng-model="patient.country" type= "text" class= "form-control" placeholder= "Residing Country"/>
+    <input ng-model="patient.telephone" type= "text" class= "form-control" placeholder= "Téléphone"/>
     </div>
 </div>
 <div class= "form-group">
