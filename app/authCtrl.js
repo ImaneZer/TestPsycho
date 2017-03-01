@@ -21,7 +21,8 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
                 $location.path('dashboard');
             }
             else if (results.status == "Succès" && results.type == "patient") {
-                document.location.href="../TestPsycho/partials/listTests.html";
+                $location.path('listTests');
+                //document.location.href="../TestPsycho/partials/listTests.html";
                 createCookie('id_medecin',results.id_medecin, 7);
                 createCookie('nom_medecin',results.nom_medecin, 7);
                 createCookie('prenom_medecin',results.prenom_medecin, 7);
