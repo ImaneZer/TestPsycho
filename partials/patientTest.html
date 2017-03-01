@@ -1073,7 +1073,7 @@ function formatoutputdata(text)
 	var j = 80;
 	for(i=0;i<15;i++){
 		col=tmp[i].split(" ");
-		var ligne = (i+1)+"                  "+((col[0] == "test") ? "test"+"                 " : "entrainement")+"            "+((col[2] == "1") ? "VRAI" : "FAUX")+"                  "+col[3] ;
+		var ligne = (i+1)+"                  "+((col[0] == "test") ? "test"+"                 " : "entrainement")+"            "+testReponse(col[4])+"                  "+col[3] ;
 		doc.setFontSize(12);
 		doc.setFont("times","normal");
 		//doc.setTextColor(0,0,0);
