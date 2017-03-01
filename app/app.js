@@ -35,6 +35,11 @@ app.config(['$routeProvider',
             templateUrl: 'partials/login.html',
             controller: 'authCtrl'
         })
+        .when('/listTests', {
+            title: 'listTests',
+            templateUrl: 'partials/listTests.html',
+            controller: 'authCtrl'
+        })
            .when('/logout', {
                 title: 'Logout',
                 templateUrl: 'partials/login.html',
