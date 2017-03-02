@@ -27,9 +27,7 @@
             <span class="icon-bar"></span>
           </button>
         
-           <a class="navbar-brand"><span> <img src="./img/logo_p1.png"/><b>   Medecin ID: </b> 
-                        / <b> Nom:</b> 
-                        </a>
+           <a class="navbar-brand"><span> <img src="./img/logo_p1.png"/><b>
 
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
@@ -46,7 +44,7 @@
         <nav class= "navbar navbar-default" role= "navigation" >
         <div class= "navbar-header" >
         <a class= "navbar-brand" href= "#/dashboard">Liste des patients </a>
-        <a class= "navbar-brand pull-right">Numéro de patient actuel: {{patient.id}}</a>
+        <a class= "navbar-brand pull-right"></a>
         </div>
         </nav>
         <header>
@@ -92,7 +90,7 @@
 <div class= "form-group">
     <label class= "col-md-2"></label>
     <div class="col-md-4">
-    <a href="#/" class="btn">Annuler</a>
+    <a href="#/dashboard" class="btn">Annuler</a>
         <button ng-click="savePatient(patient);" 
                 ng-disabled="isClean() || myForm.$invalid"
                 class="btn btn-primary">{{buttonText}}</button>
