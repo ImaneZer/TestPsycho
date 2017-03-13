@@ -1,6 +1,6 @@
 <?php
 /**
- * Database configuration
+ * Database configuration.
  */
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'ok');
