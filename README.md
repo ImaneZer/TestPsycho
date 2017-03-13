@@ -39,12 +39,12 @@ Nous nous intéressons donc, dans cette partie, à la réalisation du diagramme 
 ## Interface d'acceuil:<br>
 ![1](https://cloud.githubusercontent.com/assets/22649502/23112585/9eefda12-f731-11e6-8391-61f881842355.png)<br>
 ## Tableau de bord du medecin:<br>
-![2](https://cloud.githubusercontent.com/assets/22649502/23112633/0adc1420-f732-11e6-8cc6-b4f2b36a1e5b.png)<br>
+![2](https://cloud.githubusercontent.com/assets/22649502/23839598/8171cbde-079f-11e7-9fe7-ed59fe4f6d24.png)
 ## Interface d'ajout d'un paient par un medecin:<br>
 ![3](https://cloud.githubusercontent.com/assets/22649502/23112659/3db83eaa-f732-11e6-9304-244d49ca5168.png)<br>
 
 ## Tableau de bord du patient:<br>
-### En attente d'ajout de l'image...<br>
+![1](https://cloud.githubusercontent.com/assets/22649502/23839639/cfd56772-079f-11e7-9315-08a586c10f9b.png)<br>
 ## Départ d'un exemple de test de rotation:<br>
 ![5](https://cloud.githubusercontent.com/assets/22649502/23112726/e0451e40-f732-11e6-9a63-064def8dba75.png)<br>
 ![6](https://cloud.githubusercontent.com/assets/22649502/23112763/2f2194da-f733-11e6-9ba4-96d25a7e8454.png)<br>
