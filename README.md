@@ -6,7 +6,7 @@ Clients : <br>
 - Docteur Sophie BAUDIC. <br>
 
 ##Développement d’un serveur de tests psychologiques.<br>
-Dans le cadre d’une collaboration avec une neuro-psychologue spécialisée dans le traitement  de la douleur, il est proposé de développer un serveur web de tests psychologiques servant à diagnostiquer les effets de concentration liés au traitement de la douleur. Les test demandés soont sous forme d'affichage d'images, de caractères ou de symboles avec réaction attendu de l’utilisateur via son clavier.<br>
+Dans le cadre d’une collaboration avec une neuro-psychologue spécialisée dans le traitement  de la douleur, il est proposé de développer un serveur web de tests psychologiques servant à diagnostiquer les effets de concentration liés au traitement de la douleur. Les test demandés sont sous forme d'affichage d'images, de caractères ou de symboles avec réaction attendu de l’utilisateur via son clavier.<br>
 
 Le but est de développer un petit serveur web qui est à destination de 2 catégories d’usagers : des patients qui seront sollicités par un médecin afin de réaliser certains tests et les médecins afin qu’ils récupèrent des analyses statistiques de leur patient. Le dispositif doit pouvoir marcher en local sur une machine sans connexion au réseau. Il doit aussi pouvoir être déployé sur un site web. Le codage des applications doit être facilement accessible pour pouvoir être modifié ou adapté. L’implémentation de nouveaux tests doit être accessible en s’inspirant des applications déjà développées. On pourra penser à développer une bibliothèque de composants logiciels rendant les développements futurs simplifier.<br>
 
